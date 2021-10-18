@@ -1,3 +1,11 @@
+<?php
+session_start();
+# jika saat load halaman ini, pastikan telah login
+# sbg petugas
+if (!isset($_SESSION["petugas"])) {
+    header("location:login.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
